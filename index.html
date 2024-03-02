@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Portal</title>
+    <!-- Tailwind and Daisy ui-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <nav id="btn-container"  class="bg-slate-300 h-[100px] px-24 flex justify-center items-center mb-6 gap-2">
+       <!--  <div >
+            <button class="btn">news</button>
+            <button class="btn">news</button>
+            <button class="btn">news</button>
+            <button class="btn">news</button>
+            <button class="btn">news</button>
+            <button class="btn">news</button>
+            <button class="btn">news</button>
+            <button class="btn">news</button>
+        </div> -->
+
+    </nav>
+
+
+    <!-- search container -->
+    <div class="search-container flex  items-center px-24">
+        <div class="flex items-center w-[80%]">
+            <input id="input-field" type="text" placeholder="Type here" class="input input-bordered w-full max-w-lg" />
+            <button onclick="handleSearchBox()" id="search-btn"
+                class="px-10 py-3   bg-slate-400 translate-x-[-20%]">Search</button>
+        </div>
+    </div>
+
+
+    <!-- news card container -->
+    <div id="news-container" class="container mx-auto px-24 py-10 space-y-4">
+
+
+        <!-- card 1 -->
+       <!--  <div class="flex justify-between  bg-base-100 shadow-xl">
+
+            <div class="w-[40%]">
+                <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" alt="" class="w-[50%]">
+            </div>
+
+            <div class="w-[60%] p-6 space-y-2">
+                <h2 class="title">New movie is released!</h2>
+                <div class="my-2">
+                    <p>descrip</p>
+                </div>
+                <div class="flex justify-between">
+                    <p><span><img src="" alt=""></span>date:10-15-25</p>
+                    <p>views</p>
+                    <button class="btn btn-primary">Watch</button>
+                </div>
+                
+                
+            </div>
+
+
+        </div> -->
+
+    </div>
+
+
+    <!-- spinner loading -->
+    <div id="loading-spiner" class="hidden flex justify-center items-center">
+        <img src="https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca.gif" alt="">
+    </div>
+
+
+    <!-- modal and show details -->
+     <!-- show details modal -->
+        <!-- Open the modal using ID.showModal() method -->
+        <button  onclick="show_details_modal.showModal()"></button>
+        <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle ">
+            <div class="modal-box h-[100vh] ">
+                <h3 id="show-detail-phone-name" class="font-bold text-lg"></h3>
+                <div id="show-details-container" class="space-y-1 ">
+                  
+                </div>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn bg-red-300">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+    <!-- added script file -->
+    <script src="news.js"></script>
+</body>
+
+</html>
